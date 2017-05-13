@@ -62,8 +62,8 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
-     all-the-icons 
-     jedi 
+     all-the-icons
+     jedi
      evil-mc
      )
    ;; A list of packages that cannot be updated.
@@ -264,7 +264,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -316,8 +316,6 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (x-focus-frame nil)
 
-  (global-linum-mode) ; Show line numbers by default
-
   (define-key evil-normal-state-map (kbd "U") 'redo)
   (define-key evil-normal-state-map (kbd "s-q") 'delete-window)
 
@@ -332,7 +330,7 @@ you should place your code here."
 
   (add-hook 'before-save-hook 'whitespace-cleanup)
 
-    
+
   (require 'all-the-icons)
   (setq all-the-icons-color-icons t)
   (setq all-the-icons-for-buffer t)
