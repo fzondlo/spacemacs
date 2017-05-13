@@ -1,2 +1,2 @@
 #!/bin/sh
-/Applications/Emacs.app/Contents/MacOS/Emacs "`pwd`/$@"
+/Applications/Emacs.app/Contents/MacOS/Emacs "`pwd`/$@" &
