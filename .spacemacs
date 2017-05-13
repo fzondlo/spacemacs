@@ -325,12 +325,10 @@ you should place your code here."
   (global-set-key (kbd "s-h") 'windmove-left)
   (global-set-key (kbd "s-l") 'windmove-right)
   (global-set-key (kbd "s-\\") 'neotree-toggle)
-
-
-
+  (global-set-key (kbd "<s-return>") 'toggle-frame-fullscreen)
+  
   (add-hook 'before-save-hook 'whitespace-cleanup)
-
-
+  
   (require 'all-the-icons)
   (setq all-the-icons-color-icons t)
   (setq all-the-icons-for-buffer t)
