@@ -1,0 +1,30 @@
+#!/bin/bash
+
+## Install needed fonts
+git clone https://github.com/domtronn/all-the-icons.el.git ~/Downloads/tmp-font
+cp -R ~/Downloads/tmp-font/fonts/*.ttf /Library/Fonts/
+rm -rf ~/Downloads/tmp-font
+
+## Install Emacs
+brew tap d12frosted/emacs-plus
+brew install emacs-plus --HEAD --with-natural-title-bars
+brew linkapps emacs-plus
+
+# Install Spacemacs
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+## Download and Install Spacemacs Config 
+git clone https://github.com/fzondlo/spacemacs.git ~/spacemacs
+mv ~/.spacemacs ~/.spacemacs.bak
+ln -s ~/spacemacs/.spacemacs ~/.spacemacs
+mv ~/
+
+## Add em bash alias to bash profile and reload 
+ECHO "alias em='~/spacemacs/emacs'" >> ~/.bash_profile
+source ~/.bash_profile
+
+ECHO 'FINISHED! Opening SpaceMacs'
+
+## Open spacemacs for the first time
+em
+
